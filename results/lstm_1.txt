@@ -1,0 +1,37 @@
+# Hyperparams
+embed_size = 256
+hidden_size = 512
+num_layers = 2
+batch_size = 128
+learning_rate = 0.001
+epochs = 20
+
+
+Epoch 1/20 | Train Loss: 0.6384 | Val Loss: 0.7823
+Epoch 2/20 | Train Loss: 0.4110 | Val Loss: 0.7566
+Epoch 3/20 | Train Loss: 0.3738 | Val Loss: 0.7540
+Epoch 4/20 | Train Loss: 0.3531 | Val Loss: 0.7512
+Epoch 5/20 | Train Loss: 0.3397 | Val Loss: 0.7225
+Epoch 6/20 | Train Loss: 0.3293 | Val Loss: 0.7343
+
+Epoch 7/20 | Train Loss: 0.3208 | Val Loss: 0.6997    <----- best model checkpoint 
+
+Epoch 8/20 | Train Loss: 0.3152 | Val Loss: 0.7170
+Epoch 9/20 | Train Loss: 0.3080 | Val Loss: 0.7358
+Epoch 10/20 | Train Loss: 0.3051 | Val Loss: 0.7076
+Epoch 11/20 | Train Loss: 0.3010 | Val Loss: 0.7179
+Epoch 12/20 | Train Loss: 0.2983 | Val Loss: 0.7074
+Epoch 13/20 | Train Loss: 0.2951 | Val Loss: 0.7104
+Epoch 14/20 | Train Loss: 0.2935 | Val Loss: 0.7272
+Epoch 15/20 | Train Loss: 0.2917 | Val Loss: 0.7245
+Epoch 16/20 | Train Loss: 0.2904 | Val Loss: 0.7422
+Epoch 17/20 | Train Loss: 0.2892 | Val Loss: 0.7174
+Epoch 18/20 | Train Loss: 0.2887 | Val Loss: 0.7351
+Epoch 19/20 | Train Loss: 0.2867 | Val Loss: 0.7402
+Epoch 20/20 | Train Loss: 0.2862 | Val Loss: 0.7295
+
+
+Test Loss: 0.7840
+Character Accuracy: 79.77%
+Word Accuracy: 0.56%
+BLEU Score: 0.4305
