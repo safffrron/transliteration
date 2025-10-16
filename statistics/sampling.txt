@@ -1,0 +1,17 @@
+Distribution check:
+
+len_bin
+long      0.42903
+xlong     0.33058
+medium    0.21978
+short     0.02061
+Name: proportion, dtype: float64
+
+
+score_bin
+very_high    0.31210
+high         0.25976
+mid          0.20082
+low          0.14276
+very_low     0.08456
+Name: proportion, dtype: float64
