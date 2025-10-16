@@ -2,3 +2,4 @@
 transliteration/
 .venv/
 venv/
+_pycache_/

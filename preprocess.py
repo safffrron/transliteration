@@ -32,7 +32,7 @@ def collate_fn(batch):
 
     return src_padded, trg_padded
 
-def get_loaders(batch_size=128, train_file="hin_train.json", val_file="hin_valid.json", test_file="hin_test.json"):
+def get_loaders(batch_size=128, train_file="../hin/hin_train.json", val_file="../hin/hin_valid.json", test_file="../hin/hin_test.json"):
     # Load data
     def load_json(file_path):
         X, Y = [], []
