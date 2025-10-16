@@ -29,11 +29,10 @@ Train: 100,000 | Valid: 6,357 | Test: 10,112
 Building vocabularies...
 Source vocab: 30 | Target vocab: 69
 
-/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
-  warnings.warn(
+
+
 Starting training...
 
-                                                          
 
 Epoch 1/20
 Train Loss: 0.7424 | TF Ratio: 0.800

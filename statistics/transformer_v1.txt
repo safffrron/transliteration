@@ -1,0 +1,223 @@
+Device: cuda
+Hyperparameters:
+{
+  "train_path": "/kaggle/input/hindi-translit/hin_train_sampled.jsonl",
+  "valid_path": "/kaggle/input/hindi-translit/hin_valid.json",
+  "test_path": "/kaggle/input/hindi-translit/hin_test.json",
+  "d_model": 512,
+  "nhead": 8,
+  "num_encoder_layers": 2,
+  "num_decoder_layers": 2,
+  "dim_feedforward": 2048,
+  "dropout": 0.1,
+  "activation": "relu",
+  "max_seq_length": 128,
+  "batch_size": 128,
+  "learning_rate": 0.0005,
+  "num_epochs": 20,
+  "warmup_steps": 4000,
+  "label_smoothing": 0.1,
+  "max_target_len": 64,
+  "grad_clip": 1.0,
+  "beam_size": 5,
+  "length_penalty": 0.6,
+  "device": "cuda",
+  "save_path": "/kaggle/working/best_transformer_model.pt",
+  "seed": 42
+}
+
+Loading datasets...
+Train: 100,000 | Valid: 6,357 | Test: 10,112
+
+Building vocabularies...
+Source vocab: 30 | Target vocab: 69
+
+Building Transformer model...
+Model parameters: 14,800,965
+
+Starting training...
+
+Epoch 1:   0%|          | 0/782 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/nn/functional.py:5962: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+                                                          
+
+Epoch 1/20
+Train Loss: 2.1419 | LR: 0.000137
+Evaluating:   0%|          | 0/50 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/nn/modules/transformer.py:508: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /pytorch/aten/src/ATen/NestedTensorImpl.cpp:178.)
+  output = torch._nested_tensor_from_mask(
+                                                           
+Valid -> Word Acc: 0.2330 | LevSim: 0.7570 | CharMatch: 0.6080 | CER: 0.2698
+✓ Saved best model (metric=0.9900)
+                                                          
+
+Epoch 2/20
+Train Loss: 1.1685 | LR: 0.000273
+                                                           
+Valid -> Word Acc: 0.3154 | LevSim: 0.8029 | CharMatch: 0.6474 | CER: 0.2054
+✓ Saved best model (metric=1.1183)
+                                                          
+
+Epoch 3/20
+Train Loss: 1.0378 | LR: 0.000410
+                                                           
+Valid -> Word Acc: 0.3552 | LevSim: 0.8203 | CharMatch: 0.6872 | CER: 0.1868
+✓ Saved best model (metric=1.1755)
+                                                          
+
+Epoch 4/20
+Train Loss: 0.9951 | LR: 0.000546
+                                                           
+Valid -> Word Acc: 0.3799 | LevSim: 0.8287 | CharMatch: 0.6998 | CER: 0.1761
+✓ Saved best model (metric=1.2086)
+                                                          
+
+Epoch 5/20
+Train Loss: 0.9849 | LR: 0.000683
+                                                           
+Valid -> Word Acc: 0.3629 | LevSim: 0.8182 | CharMatch: 0.6904 | CER: 0.1893
+No improvement (1/5)
+                                                          
+
+Epoch 6/20
+Train Loss: 0.9763 | LR: 0.000645
+                                                           
+Valid -> Word Acc: 0.3840 | LevSim: 0.8310 | CharMatch: 0.7050 | CER: 0.1735
+✓ Saved best model (metric=1.2150)
+                                                          
+
+Epoch 7/20
+Train Loss: 0.9538 | LR: 0.000597
+                                                           
+Valid -> Word Acc: 0.3934 | LevSim: 0.8299 | CharMatch: 0.7066 | CER: 0.1753
+✓ Saved best model (metric=1.2233)
+                                                          
+
+Epoch 8/20
+Train Loss: 0.9346 | LR: 0.000559
+                                                           
+Valid -> Word Acc: 0.4164 | LevSim: 0.8389 | CharMatch: 0.7242 | CER: 0.1671
+✓ Saved best model (metric=1.2553)
+                                                          
+
+Epoch 9/20
+Train Loss: 0.9197 | LR: 0.000527
+                                                           
+Valid -> Word Acc: 0.4272 | LevSim: 0.8429 | CharMatch: 0.7280 | CER: 0.1677
+✓ Saved best model (metric=1.2701)
+                                                           
+
+Epoch 10/20
+Train Loss: 0.9072 | LR: 0.000500
+                                                           
+Valid -> Word Acc: 0.4345 | LevSim: 0.8459 | CharMatch: 0.7316 | CER: 0.1558
+✓ Saved best model (metric=1.2804)
+                                                           
+
+Epoch 11/20
+Train Loss: 0.8970 | LR: 0.000477
+                                                           
+Valid -> Word Acc: 0.4320 | LevSim: 0.8434 | CharMatch: 0.7297 | CER: 0.1568
+No improvement (1/5)
+                                                           
+
+Epoch 12/20
+Train Loss: 0.8887 | LR: 0.000456
+                                                           
+Valid -> Word Acc: 0.4343 | LevSim: 0.8389 | CharMatch: 0.7314 | CER: 0.1614
+No improvement (2/5)
+                                                           
+
+Epoch 13/20
+Train Loss: 0.8808 | LR: 0.000438
+                                                           
+Valid -> Word Acc: 0.4463 | LevSim: 0.8447 | CharMatch: 0.7445 | CER: 0.1590
+✓ Saved best model (metric=1.2910)
+                                                           
+
+Epoch 14/20
+Train Loss: 0.8741 | LR: 0.000422
+                                                           
+Valid -> Word Acc: 0.4513 | LevSim: 0.8509 | CharMatch: 0.7471 | CER: 0.1485
+✓ Saved best model (metric=1.3022)
+                                                           
+
+Epoch 15/20
+Train Loss: 0.8686 | LR: 0.000408
+                                                           
+Valid -> Word Acc: 0.4663 | LevSim: 0.8567 | CharMatch: 0.7570 | CER: 0.1436
+✓ Saved best model (metric=1.3229)
+                                                           
+
+Epoch 16/20
+Train Loss: 0.8628 | LR: 0.000395
+                                                           
+Valid -> Word Acc: 0.4658 | LevSim: 0.8550 | CharMatch: 0.7550 | CER: 0.1438
+No improvement (1/5)
+                                                           
+
+Epoch 17/20
+Train Loss: 0.8581 | LR: 0.000383
+                                                           
+Valid -> Word Acc: 0.4628 | LevSim: 0.8561 | CharMatch: 0.7570 | CER: 0.1426
+No improvement (2/5)
+                                                           
+
+Epoch 18/20
+Train Loss: 0.8538 | LR: 0.000372
+                                                           
+Valid -> Word Acc: 0.4773 | LevSim: 0.8603 | CharMatch: 0.7588 | CER: 0.1387
+✓ Saved best model (metric=1.3375)
+                                                           
+
+Epoch 19/20
+Train Loss: 0.8494 | LR: 0.000363
+                                                           
+Valid -> Word Acc: 0.4771 | LevSim: 0.8606 | CharMatch: 0.7644 | CER: 0.1382
+✓ Saved best model (metric=1.3377)
+                                                           
+
+Epoch 20/20
+Train Loss: 0.8464 | LR: 0.000353
+                                                           
+Valid -> Word Acc: 0.4713 | LevSim: 0.8565 | CharMatch: 0.7628 | CER: 0.1426
+No improvement (1/5)
+
+============================================================
+FINAL EVALUATION ON TEST SET
+============================================================
+                                                           
+
+Test Results:
+  Word Accuracy: 0.4508 (45.08%)
+  Levenshtein Similarity: 0.8510
+  Character Match Rate: 0.7459
+  Character Error Rate (CER): 0.1493
+  1 - CER: 0.8507
+
+============================================================
+INFERENCE EXAMPLES (Beam Search)
+============================================================
+namaste         -> नमस्ते
+bharat          -> भारत
+kumar           -> कुमार
+gargling        -> गार्गलिंग
+delhi           -> देल्ही
+maharashtra     -> महाराष्ट्र
+rajasthan       -> राजस्थान
+bengaluru       -> बेंगलूरू
+sanskrit        -> संस्कृत
+himalaya        -> हिमालय
+gandhi          -> गांधी
+nehru           -> नेहरू
+india           -> इंडिया
+mumbai          -> मुंबई
+chennai         -> चेन्नई
+
+============================================================
+SENTENCE INFERENCE
+============================================================
+namaste bharat       -> नमस्ते भारत
+jai hind             -> जैयाई हिंद
+kumar singh          -> कुमार सिंह
+delhi mumbai         -> देल्ही मुंबई
+ram krishna          -> राम कृष्ण
