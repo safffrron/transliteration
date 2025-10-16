@@ -1,0 +1,269 @@
+Device: cuda
+Hyperparameters:
+{
+  "train_path": "/kaggle/input/hindi-translit/hin_train_sampled.jsonl",
+  "valid_path": "/kaggle/input/hindi-translit/hin_valid.json",
+  "test_path": "/kaggle/input/hindi-translit/hin_test.json",
+  "d_model": 512,
+  "nhead": 8,
+  "num_encoder_layers": 2,
+  "num_decoder_layers": 2,
+  "dim_feedforward": 2048,
+  "dropout": 0.1,
+  "activation": "relu",
+  "max_seq_length": 128,
+  "layer_norm_eps": 1e-05,
+  "batch_size": 128,
+  "learning_rate": 0.0003,
+  "num_epochs": 25,
+  "warmup_epochs": 5,
+  "min_lr": 5e-06,
+  "label_smoothing": 0.1,
+  "max_target_len": 64,
+  "grad_clip": 1.0,
+  "weight_decay": 0.0001,
+  "beam_size": 5,
+  "length_penalty": 0.6,
+  "device": "cuda",
+  "save_path": "/kaggle/working/best_transformer_v2.pt",
+  "seed": 42
+}
+
+Loading datasets...
+Train: 100,000 | Valid: 6,357 | Test: 10,112
+
+Building vocabularies...
+Source vocab: 30 | Target vocab: 69
+
+Building improved Transformer model...
+Model parameters: 14,765,637
+
+Starting training...
+                                                          
+
+Epoch 1/25
+Train Loss: 2.5169 | LR: 0.000060
+                                                           
+Valid -> Word: 0.1502 | LevSim: 0.6968 | Char: 0.5551 | CER: 0.3854
+✓ Best model saved (metric=0.8470)
+                                                          
+
+Epoch 2/25
+Train Loss: 1.3136 | LR: 0.000120
+                                                           
+Valid -> Word: 0.2836 | LevSim: 0.7907 | Char: 0.6314 | CER: 0.2165
+✓ Best model saved (metric=1.0744)
+                                                          
+
+Epoch 3/25
+Train Loss: 1.1069 | LR: 0.000180
+                                                           
+Valid -> Word: 0.3360 | LevSim: 0.8127 | Char: 0.6774 | CER: 0.1930
+✓ Best model saved (metric=1.1487)
+                                                          
+
+Epoch 4/25
+Train Loss: 1.0144 | LR: 0.000240
+                                                           
+Valid -> Word: 0.3521 | LevSim: 0.8215 | Char: 0.6940 | CER: 0.1838
+✓ Best model saved (metric=1.1736)
+                                                          
+
+Epoch 5/25
+Train Loss: 0.9712 | LR: 0.000300
+                                                           
+Valid -> Word: 0.3926 | LevSim: 0.8344 | Char: 0.7085 | CER: 0.1679
+✓ Best model saved (metric=1.2270)
+                                                          
+
+Epoch 6/25
+Train Loss: 0.9449 | LR: 0.000298
+                                                           
+Valid -> Word: 0.4154 | LevSim: 0.8431 | Char: 0.7203 | CER: 0.1569
+✓ Best model saved (metric=1.2586)
+                                                          
+
+Epoch 7/25
+Train Loss: 0.9231 | LR: 0.000293
+                                                           
+Valid -> Word: 0.4332 | LevSim: 0.8471 | Char: 0.7321 | CER: 0.1527
+✓ Best model saved (metric=1.2803)
+                                                          
+
+Epoch 8/25
+Train Loss: 0.9075 | LR: 0.000284
+                                                           
+Valid -> Word: 0.4206 | LevSim: 0.8382 | Char: 0.7249 | CER: 0.1638
+No improvement (1/6)
+                                                          
+
+Epoch 9/25
+Train Loss: 0.8955 | LR: 0.000272
+                                                           
+Valid -> Word: 0.4412 | LevSim: 0.8452 | Char: 0.7342 | CER: 0.1542
+✓ Best model saved (metric=1.2864)
+                                                           
+
+Epoch 10/25
+Train Loss: 0.8848 | LR: 0.000257
+                                                           
+Valid -> Word: 0.4497 | LevSim: 0.8471 | Char: 0.7346 | CER: 0.1523
+✓ Best model saved (metric=1.2968)
+                                                           
+
+Epoch 11/25
+Train Loss: 0.8753 | LR: 0.000239
+                                                           
+Valid -> Word: 0.4683 | LevSim: 0.8562 | Char: 0.7539 | CER: 0.1434
+✓ Best model saved (metric=1.3245)
+                                                           
+
+Epoch 12/25
+Train Loss: 0.8666 | LR: 0.000219
+                                                           
+Valid -> Word: 0.4585 | LevSim: 0.8501 | Char: 0.7487 | CER: 0.1508
+No improvement (1/6)
+                                                           
+
+Epoch 13/25
+Train Loss: 0.8586 | LR: 0.000198
+                                                           
+Valid -> Word: 0.4768 | LevSim: 0.8542 | Char: 0.7582 | CER: 0.1457
+✓ Best model saved (metric=1.3310)
+                                                           
+
+Epoch 14/25
+Train Loss: 0.8506 | LR: 0.000176
+                                                           
+Valid -> Word: 0.4738 | LevSim: 0.8519 | Char: 0.7563 | CER: 0.1468
+No improvement (1/6)
+                                                           
+
+Epoch 15/25
+Train Loss: 0.8435 | LR: 0.000152
+                                                           
+Valid -> Word: 0.4913 | LevSim: 0.8622 | Char: 0.7682 | CER: 0.1355
+✓ Best model saved (metric=1.3535)
+                                                           
+
+Epoch 16/25
+Train Loss: 0.8363 | LR: 0.000129
+                                                           
+Valid -> Word: 0.4952 | LevSim: 0.8625 | Char: 0.7721 | CER: 0.1352
+✓ Best model saved (metric=1.3577)
+                                                           
+
+Epoch 17/25
+Train Loss: 0.8296 | LR: 0.000107
+                                                           
+Valid -> Word: 0.4895 | LevSim: 0.8595 | Char: 0.7682 | CER: 0.1396
+No improvement (1/6)
+                                                           
+
+Epoch 18/25
+Train Loss: 0.8234 | LR: 0.000086
+                                                           
+Valid -> Word: 0.4982 | LevSim: 0.8630 | Char: 0.7753 | CER: 0.1346
+✓ Best model saved (metric=1.3612)
+                                                           
+
+Epoch 19/25
+Train Loss: 0.8180 | LR: 0.000066
+                                                           
+Valid -> Word: 0.4991 | LevSim: 0.8613 | Char: 0.7746 | CER: 0.1371
+No improvement (1/6)
+                                                           
+
+Epoch 20/25
+Train Loss: 0.8131 | LR: 0.000048
+                                                           
+Valid -> Word: 0.5021 | LevSim: 0.8628 | Char: 0.7767 | CER: 0.1354
+✓ Best model saved (metric=1.3649)
+                                                           
+
+Epoch 21/25
+Train Loss: 0.8092 | LR: 0.000033
+                                                           
+Valid -> Word: 0.5078 | LevSim: 0.8669 | Char: 0.7804 | CER: 0.1308
+✓ Best model saved (metric=1.3747)
+                                                           
+
+Epoch 22/25
+Train Loss: 0.8058 | LR: 0.000021
+                                                           
+Valid -> Word: 0.5079 | LevSim: 0.8661 | Char: 0.7807 | CER: 0.1315
+No improvement (1/6)
+                                                           
+
+Epoch 23/25
+Train Loss: 0.8031 | LR: 0.000012
+                                                           
+Valid -> Word: 0.5081 | LevSim: 0.8668 | Char: 0.7804 | CER: 0.1311
+✓ Best model saved (metric=1.3749)
+                                                           
+
+Epoch 24/25
+Train Loss: 0.8018 | LR: 0.000007
+                                                           
+Valid -> Word: 0.5103 | LevSim: 0.8676 | Char: 0.7811 | CER: 0.1303
+✓ Best model saved (metric=1.3779)
+                                                           
+
+Epoch 25/25
+Train Loss: 0.8009 | LR: 0.000005
+                                                           
+Valid -> Word: 0.5084 | LevSim: 0.8668 | Char: 0.7809 | CER: 0.1311
+No improvement (1/6)
+
+======================================================================
+FINAL TEST EVALUATION
+======================================================================
+Loaded best model from epoch 24
+
+                                                           
+Test Results:
+  Word Accuracy: 0.4762 (47.62%)
+  Levenshtein Similarity: 0.8580
+  Character Match Rate: 0.7613
+  Character Error Rate (CER): 0.1392
+  1 - CER: 0.8608
+
+======================================================================
+INFERENCE EXAMPLES (Beam Search)
+======================================================================
+namaste         -> नमस्ते
+bharat          -> भारत
+kumar           -> कुमार
+gargling        -> गार्गलिंग
+delhi           -> देल्ही
+maharashtra     -> महाराष्ट्र
+rajasthan       -> राजस्थान
+bengaluru       -> बेंगलुरू
+sanskrit        -> संस्कृत
+himalaya        -> हिमालय
+gandhi          -> गांधी
+nehru           -> नेहरू
+india           -> इंडिया
+mumbai          -> मुंबई
+chennai         -> चेन्नई
+kolkata         -> कोलकाता
+lucknow         -> लकनो
+jaipur          -> जयपुर
+chandigarh      -> चंडीगढ़
+hyderabad       -> हैदराबाद
+
+======================================================================
+SENTENCE INFERENCE
+======================================================================
+namaste bharat            -> नमस्ते भारत
+jai hind                  -> जै हिंद
+kumar singh               -> कुमार सिंह
+delhi mumbai              -> देल्ही मुंबई
+ram krishna               -> राम कृष्ण
+mahatma gandhi            -> महात्मा गांधी
+jawaharlal nehru          -> जवाहरलाल नेहरू
+
+======================================================================
+Training complete! Best model saved to: /kaggle/working/best_transformer_v2.pt
+Best validation metric: 1.3779
+======================================================================

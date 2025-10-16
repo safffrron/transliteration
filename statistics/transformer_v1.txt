@@ -35,16 +35,10 @@ Source vocab: 30 | Target vocab: 69
 Building Transformer model...
 Model parameters: 14,800,965
 
-Starting training...
-
-Epoch 1:   0%|          | 0/782 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/nn/functional.py:5962: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
-  warnings.warn(
-                                                          
+Starting training...                            
 
 Epoch 1/20
 Train Loss: 2.1419 | LR: 0.000137
-Evaluating:   0%|          | 0/50 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/torch/nn/modules/transformer.py:508: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /pytorch/aten/src/ATen/NestedTensorImpl.cpp:178.)
-  output = torch._nested_tensor_from_mask(
                                                            
 Valid -> Word Acc: 0.2330 | LevSim: 0.7570 | CharMatch: 0.6080 | CER: 0.2698
 ✓ Saved best model (metric=0.9900)
