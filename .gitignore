@@ -3,3 +3,4 @@ transliteration/
 .venv/
 venv/
 _pycache_/
+lstm_checkpoint/best_bilstm_transliteration_model.pth 
