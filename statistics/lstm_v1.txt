@@ -1,0 +1,136 @@
+# ---------------------------
+# HYPERPARAMETERS 
+# ---------------------------
+HP = {
+    "train_path": "/kaggle/input/hindi-translit/hin_train_sampled.jsonl",
+    "valid_path": "/kaggle/input/hindi-translit/hin_valid.json",
+    "test_path":  "/kaggle/input/hindi-translit/hin_test.json",
+    "batch_size": 256,
+    "embed_size": 128,
+    "hidden_size": 256,
+    "num_layers": 2,           # MUST be <= 2 (enforced)
+    "bidirectional_encoder": True,
+    "dropout": 0.4,
+    "learning_rate": 1e-3,
+    "num_epochs": 12,
+    "teacher_forcing_ratio": 0.5,
+    "max_target_len": 64,      # truncate very long targets
+    "device": "cuda" if torch.cuda.is_available() else "cpu",
+    "save_path": "/kaggle/working/sampled_lstm_model.pt",
+    "seed": 42,
+}
+
+# ---------------------------
+# TRAINING
+# ---------------------------
+
+Loading datasets...
+Train: 100,000 | Valid: 6,357 | Test: 10,112
+Building vocabularies (this uses chars from train+valid+test)...
+Source vocab size: 30 ; Target vocab size: 69
+
+===== Epoch 1/12 =====
+                                                        
+Train loss: 1.5960
+Valid evaluation...
+                                                     
+Valid Word Acc: 0.2449  |  Valid Avg LevSim: 0.7687  |  CharMatchRate: 0.6350
+Saved best model to /kaggle/working/sampled_lstm_model.pt (metric=1.0136)
+
+===== Epoch 2/12 =====
+                                                        
+Train loss: 0.7680
+Valid evaluation...
+                                                     
+Valid Word Acc: 0.3319  |  Valid Avg LevSim: 0.8112  |  CharMatchRate: 0.6865
+Saved best model to /kaggle/working/sampled_lstm_model.pt (metric=1.1431)
+
+===== Epoch 3/12 =====
+                                                        
+Train loss: 0.6143
+Valid evaluation...
+                                                     
+Valid Word Acc: 0.3753  |  Valid Avg LevSim: 0.8280  |  CharMatchRate: 0.7135
+Saved best model to /kaggle/working/sampled_lstm_model.pt (metric=1.2033)
+
+===== Epoch 4/12 =====
+                                                        
+Train loss: 0.5125
+Valid evaluation...
+                                                     
+Valid Word Acc: 0.3958  |  Valid Avg LevSim: 0.8327  |  CharMatchRate: 0.7216
+Saved best model to /kaggle/working/sampled_lstm_model.pt (metric=1.2285)
+
+===== Epoch 5/12 =====
+                                                        
+Train loss: 0.4609
+Valid evaluation...
+                                                     
+Valid Word Acc: 0.4029  |  Valid Avg LevSim: 0.8365  |  CharMatchRate: 0.7285
+Saved best model to /kaggle/working/sampled_lstm_model.pt (metric=1.2394)
+
+===== Epoch 6/12 =====
+                                                        
+Train loss: 0.3994
+Valid evaluation...
+                                                     
+Valid Word Acc: 0.4184  |  Valid Avg LevSim: 0.8420  |  CharMatchRate: 0.7353
+Saved best model to /kaggle/working/sampled_lstm_model.pt (metric=1.2604)
+
+===== Epoch 7/12 =====
+                                                        
+Train loss: 0.3586
+Valid evaluation...
+                                                     
+Valid Word Acc: 0.4147  |  Valid Avg LevSim: 0.8433  |  CharMatchRate: 0.7419
+
+===== Epoch 8/12 =====
+                                                        
+Train loss: 0.3225
+Valid evaluation...
+                                                     
+Valid Word Acc: 0.4320  |  Valid Avg LevSim: 0.8469  |  CharMatchRate: 0.7470
+Saved best model to /kaggle/working/sampled_lstm_model.pt (metric=1.2788)
+
+===== Epoch 9/12 =====
+                                                        
+Train loss: 0.2969
+Valid evaluation...
+                                                     
+Valid Word Acc: 0.4368  |  Valid Avg LevSim: 0.8489  |  CharMatchRate: 0.7492
+Saved best model to /kaggle/working/sampled_lstm_model.pt (metric=1.2857)
+
+===== Epoch 10/12 =====
+                                                        
+Train loss: 0.2883
+Valid evaluation...
+                                                     
+Valid Word Acc: 0.4411  |  Valid Avg LevSim: 0.8505  |  CharMatchRate: 0.7528
+Saved best model to /kaggle/working/sampled_lstm_model.pt (metric=1.2916)
+
+===== Epoch 11/12 =====
+                                                        
+Train loss: 0.2496
+Valid evaluation...
+                                                     
+Valid Word Acc: 0.4345  |  Valid Avg LevSim: 0.8470  |  CharMatchRate: 0.7454
+
+===== Epoch 12/12 =====
+                                                        
+Train loss: 0.2262
+Valid evaluation...
+                                                     
+Valid Word Acc: 0.4453  |  Valid Avg LevSim: 0.8504  |  CharMatchRate: 0.7502
+Saved best model to /kaggle/working/sampled_lstm_model.pt (metric=1.2958)
+
+=== Loading best model and evaluating on test set ===
+Running evaluation on test set ...
+                                                     
+Test Word Acc: 0.4139
+Test Avg Levenshtein Similarity: 0.8398
+Test Char Match Rate (position-wise): 0.7371
+namaste  ->  नमस्ते
+bharat  ->  भरत
+kumar  ->  कुमार
+gargling  ->  गार्गलिंग
+Done.
