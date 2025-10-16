@@ -15,3 +15,6 @@ mid          0.20082
 low          0.14276
 very_low     0.08456
 Name: proportion, dtype: float64
+
+Weighted sampling done via : 
+Weight = combination of score rank (70%) + length rank (30%)
