@@ -168,7 +168,8 @@ def infer_sentence(sentence: str, enc_model, dec_model, src_vocab, inv_tgt, hp) 
 
 
 # Example usage:
-examples = ["namaste", "bharat", "kumar", "gargling"]
+sent = input("Enter the sentence\n")
+examples = sent.split()
 for w in examples:
     pred = infer_word(w, enc_model, dec_model, saved_src_vocab, saved_inv_tgt, hp)
     print(f"{w}  ->  {pred}")

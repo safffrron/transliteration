@@ -1,0 +1,208 @@
+Device: cuda
+Hyperparameters: {
+  "train_path": "/kaggle/input/hindi-translit/hin_train_sampled.jsonl",
+  "valid_path": "/kaggle/input/hindi-translit/hin_valid.json",
+  "test_path": "/kaggle/input/hindi-translit/hin_test.json",
+  "embed_size": 256,
+  "hidden_size": 512,
+  "num_layers": 2,
+  "bidirectional_encoder": true,
+  "dropout": 0.3,
+  "attention_type": "bahdanau",
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "num_epochs": 20,
+  "teacher_forcing_start": 0.8,
+  "teacher_forcing_end": 0.1,
+  "max_target_len": 64,
+  "grad_clip": 1.0,
+  "beam_size": 5,
+  "length_penalty": 0.6,
+  "device": "cuda",
+  "save_path": "/kaggle/working/best_attention_model.pt",
+  "seed": 42
+}
+
+Loading datasets...
+Train: 100,000 | Valid: 6,357 | Test: 10,112
+
+Building vocabularies...
+Source vocab: 30 | Target vocab: 69
+
+/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+Starting training...
+
+                                                          
+
+Epoch 1/20
+Train Loss: 0.7424 | TF Ratio: 0.800
+                                                           
+Valid -> Word Acc: 0.3690 | LevSim: 0.8304 | CharMatch: 0.7057 | CER: 0.1740
+✓ Saved best model (metric=1.1994)
+                                                          
+
+Epoch 2/20
+Train Loss: 0.3828 | TF Ratio: 0.763
+                                                           
+Valid -> Word Acc: 0.4194 | LevSim: 0.8467 | CharMatch: 0.7393 | CER: 0.1560
+✓ Saved best model (metric=1.2661)
+                                                          
+
+Epoch 3/20
+Train Loss: 0.3195 | TF Ratio: 0.726
+                                                           
+Valid -> Word Acc: 0.4412 | LevSim: 0.8537 | CharMatch: 0.7503 | CER: 0.1466
+✓ Saved best model (metric=1.2950)
+                                                          
+
+Epoch 4/20
+Train Loss: 0.3029 | TF Ratio: 0.689
+                                                           
+Valid -> Word Acc: 0.4576 | LevSim: 0.8589 | CharMatch: 0.7525 | CER: 0.1397
+✓ Saved best model (metric=1.3165)
+                                                          
+
+Epoch 5/20
+Train Loss: 0.2874 | TF Ratio: 0.653
+                                                           
+Valid -> Word Acc: 0.4641 | LevSim: 0.8589 | CharMatch: 0.7605 | CER: 0.1405
+✓ Saved best model (metric=1.3229)
+                                                          
+
+Epoch 6/20
+Train Loss: 0.2542 | TF Ratio: 0.616
+                                                           
+Valid -> Word Acc: 0.4672 | LevSim: 0.8590 | CharMatch: 0.7584 | CER: 0.1392
+✓ Saved best model (metric=1.3262)
+                                                          
+
+Epoch 7/20
+Train Loss: 0.2525 | TF Ratio: 0.579
+                                                           
+Valid -> Word Acc: 0.4521 | LevSim: 0.8563 | CharMatch: 0.7645 | CER: 0.1434
+No improvement (1/4)
+                                                          
+
+Epoch 8/20
+Train Loss: 0.2365 | TF Ratio: 0.542
+                                                           
+Valid -> Word Acc: 0.4721 | LevSim: 0.8612 | CharMatch: 0.7651 | CER: 0.1370
+✓ Saved best model (metric=1.3332)
+                                                          
+
+Epoch 9/20
+Train Loss: 0.2318 | TF Ratio: 0.505
+                                                           
+Valid -> Word Acc: 0.4719 | LevSim: 0.8597 | CharMatch: 0.7672 | CER: 0.1397
+No improvement (1/4)
+                                                           
+
+Epoch 10/20
+Train Loss: 0.2118 | TF Ratio: 0.468
+                                                           
+Valid -> Word Acc: 0.4617 | LevSim: 0.8571 | CharMatch: 0.7689 | CER: 0.1443
+No improvement (2/4)
+                                                           
+
+Epoch 11/20
+Train Loss: 0.2160 | TF Ratio: 0.432
+                                                           
+Valid -> Word Acc: 0.4749 | LevSim: 0.8612 | CharMatch: 0.7698 | CER: 0.1378
+✓ Saved best model (metric=1.3361)
+                                                           
+
+Epoch 12/20
+Train Loss: 0.1967 | TF Ratio: 0.395
+                                                           
+Valid -> Word Acc: 0.4724 | LevSim: 0.8610 | CharMatch: 0.7703 | CER: 0.1384
+No improvement (1/4)
+                                                           
+
+Epoch 13/20
+Train Loss: 0.1887 | TF Ratio: 0.358
+                                                           
+Valid -> Word Acc: 0.4685 | LevSim: 0.8582 | CharMatch: 0.7729 | CER: 0.1411
+No improvement (2/4)
+                                                           
+
+Epoch 14/20
+Train Loss: 0.1862 | TF Ratio: 0.321
+                                                           
+Valid -> Word Acc: 0.4658 | LevSim: 0.8566 | CharMatch: 0.7706 | CER: 0.1415
+No improvement (3/4)
+                                                           
+
+Epoch 15/20
+Train Loss: 0.1283 | TF Ratio: 0.284
+                                                           
+Valid -> Word Acc: 0.4861 | LevSim: 0.8641 | CharMatch: 0.7797 | CER: 0.1342
+✓ Saved best model (metric=1.3502)
+                                                           
+
+Epoch 16/20
+Train Loss: 0.0982 | TF Ratio: 0.247
+                                                           
+Valid -> Word Acc: 0.4807 | LevSim: 0.8619 | CharMatch: 0.7749 | CER: 0.1365
+No improvement (1/4)
+                                                           
+
+Epoch 17/20
+Train Loss: 0.0884 | TF Ratio: 0.211
+                                                           
+Valid -> Word Acc: 0.4899 | LevSim: 0.8652 | CharMatch: 0.7768 | CER: 0.1330
+✓ Saved best model (metric=1.3551)
+                                                           
+
+Epoch 18/20
+Train Loss: 0.0864 | TF Ratio: 0.174
+                                                           
+Valid -> Word Acc: 0.4851 | LevSim: 0.8626 | CharMatch: 0.7779 | CER: 0.1364
+No improvement (1/4)
+                                                           
+
+Epoch 19/20
+Train Loss: 0.0860 | TF Ratio: 0.137
+                                                           
+Valid -> Word Acc: 0.4900 | LevSim: 0.8641 | CharMatch: 0.7792 | CER: 0.1341
+No improvement (2/4)
+                                                           
+
+Epoch 20/20
+Train Loss: 0.0837 | TF Ratio: 0.100
+                                                           
+Valid -> Word Acc: 0.4828 | LevSim: 0.8611 | CharMatch: 0.7766 | CER: 0.1376
+No improvement (3/4)
+
+============================================================
+FINAL EVALUATION ON TEST SET
+============================================================
+                                                           
+
+Test Results:
+  Word Accuracy: 0.4641 (46.41%)
+  Levenshtein Similarity: 0.8566
+  Character Match Rate: 0.7621
+  Character Error Rate (CER): 0.1414
+  1 - CER: 0.8586
+
+============================================================
+INFERENCE EXAMPLES (Beam Search)
+============================================================
+namaste         -> नमस्ते
+bharat          -> भारत
+kumar           -> कुमार
+gargling        -> गार्गलिंग
+delhi           -> डेल्ही
+maharashtra     -> महाराष्ट्र
+rajasthan       -> राजस्थान
+bengaluru       -> बेंगलुरू
+sanskrit        -> संस्कृत
+himalaya        -> हिमालय
+
+============================================================
+SENTENCE INFERENCE
+============================================================
+namaste bharat       -> नमस्ते भारत
+jai hind             -> जै हिंद
+kumar singh          -> कुमार सिंह
