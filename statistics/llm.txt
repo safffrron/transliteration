@@ -1,0 +1,9 @@
+--> mistral nemo 12b instruct <--
+
+Word-level Accuracy: 33.35%
+Character-level Accuracy: 64.30%
+
+--> mistral-small-3.1-24b-instruct-2503 <--
+
+Final Word-level Accuracy: 47.28%
+Final Character-level Accuracy: 75.67%

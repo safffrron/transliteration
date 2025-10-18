@@ -335,12 +335,12 @@ criterion = nn.CrossEntropyLoss(ignore_index=0)
 
 
 
-# sent = input("Enter a sentence \n")
-# pred = infer_sentence(sent, enc, dec, src_vocab, inv_tgt, hp)
-# print(f"{sent:20s} -> {pred}")
+    # sent = input("Enter a sentence \n")
+    # pred = infer_sentence(sent, enc, dec, src_vocab, inv_tgt, hp)
+    # print(f"{sent:20s} -> {pred}")
 
-
-sent = input("Enter a sentence \n").strip().split()
-for word in sent:
-    pred = infer_word(word, enc, dec, src_vocab, inv_tgt, hp)
-    print(f"{word:15s} -> {pred}")
+if __name__ == "__main__":
+    sent = input("Enter a sentence \n").strip().split()
+    for word in sent:
+        pred = infer_word(word, enc, dec, src_vocab, inv_tgt, hp)
+        print(f"{word:15s} -> {pred}")

@@ -1,0 +1,13 @@
+{
+  "total_samples": 10112,
+  "failed_requests": 0,
+  "accuracy": 0.4432357594936709,
+  "average_cer": 0.18272413463537582,
+  "average_similarity": 0.846686877149584,
+  "average_char_accuracy": 0.7438738489402209,
+  "average_edit_distance": 1.1349881329113924,
+  "median_edit_distance": 1.0,
+  "average_inference_time_ms": 416.46685635175885,
+  "median_inference_time_ms": 386.2234354019165,
+  "throughput_words_per_sec": 2.401151459590277
+}

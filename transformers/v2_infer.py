@@ -299,8 +299,8 @@ model = ImprovedTransformer(
 
 model.load_state_dict(ckpt["model_state"])
 
-
-examples = input("Enter the sentence \n").strip().split()
-for word in examples:
-    pred = infer_word(word, model, src_vocab, inv_tgt, hp)
-    print(f"{word:15s} -> {pred}")
+if __name__ == "__main__":
+    examples = input("Enter the sentence \n").strip().split()
+    for word in examples:
+        pred = infer_word(word, model, src_vocab, inv_tgt, hp)
+        print(f"{word:15s} -> {pred}")

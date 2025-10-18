@@ -1,0 +1,131 @@
+================================================================================
+COMPREHENSIVE MODEL COMPARISON REPORT
+================================================================================
+
+1. OVERALL PERFORMANCE COMPARISON
+--------------------------------------------------------------------------------
+       Model Accuracy (%)    CER Similarity Char Accuracy Avg Edit Dist Inference (ms) Throughput (w/s)
+        LSTM        46.59 0.1574     0.8582        0.7587          0.96         165.55             6.04
+ Transformer        47.78 0.1608     0.8581        0.7580          0.96         184.81             5.41
+ NVIDIA_Nemo        32.78 0.2169     0.7968        0.6660          1.41         361.30             2.77
+NVIDIA_Small        44.32 0.1827     0.8467        0.7439          1.13         416.47             2.40
+
+2. MODEL AGREEMENT MATRIX
+--------------------------------------------------------------------------------
+                  LSTM  Transformer  NVIDIA_Nemo  NVIDIA_Small
+LSTM          1.000000     0.702631     0.343948      0.446104
+Transformer   0.702631     1.000000     0.357100      0.467563
+NVIDIA_Nemo   0.343948     0.357100     1.000000      0.425534
+NVIDIA_Small  0.446104     0.467563     0.425534      1.000000
+
+3. COMPLEMENTARITY ANALYSIS
+--------------------------------------------------------------------------------
+                            only_model1_correct  only_model2_correct  both_correct  union_accuracy  complementarity_score
+LSTM + Transformer                        638.0                759.0        4073.0        0.540941               0.138153
+LSTM + NVIDIA_Nemo                       2422.0               1026.0        2289.0        0.567346               0.340981
+LSTM + NVIDIA_Small                      1644.0               1415.0        3067.0        0.605815               0.302512
+Transformer + NVIDIA_Nemo                2483.0                966.0        2349.0        0.573378               0.341080
+Transformer + NVIDIA_Small               1651.0               1301.0        3181.0        0.606507               0.291930
+NVIDIA_Nemo + NVIDIA_Small                759.0               1926.0        2556.0        0.518295               0.265526
+
+4. PERFORMANCE BY DIFFICULTY
+--------------------------------------------------------------------------------
+Model                          LSTM  NVIDIA_Nemo  NVIDIA_Small  Transformer
+Difficulty                                                                 
+Easy (0-25% error)         0.937536     0.704743      0.915269     0.953441
+Hard (50-75% error)        0.191573     0.213957      0.401580     0.192890
+Medium (25-50% error)      0.640217     0.300543      0.384239     0.675000
+Very Hard (75-100% error)  0.000000     0.000000      0.000000     0.000000
+
+5. TOP DISAGREEMENT CASES
+--------------------------------------------------------------------------------
+
+Source: phwcs
+Reference: पीएचडब्ल्यूसीएस
+LSTM           : फफव्स
+Transformer    : फ्व्स
+NVIDIA_Nemo    : फ़्व्क्स
+NVIDIA_Small   : फ्वक्स
+Correct models: None
+--------------------------------------------------------------------------------
+
+Source: eksisatens
+Reference: एक्सिसटेंस
+LSTM           : एक्सिसेटेंस
+Transformer    : एक्सीसेटेंस
+NVIDIA_Nemo    : एकसिसटन्स
+NVIDIA_Small   : एक्सिसटेंस
+Correct models: NVIDIA_Small
+--------------------------------------------------------------------------------
+
+Source: enseeaardablyusee
+Reference: एनसीआरडब्ल्यूसी
+LSTM           : एंसीअर्डबल्यूसी
+Transformer    : एन्सीअर्डबल्यूसी
+NVIDIA_Nemo    : एन्सीअर्डेबलयूज़
+NVIDIA_Small   : एन्सीअर्डबलीयूसी
+Correct models: None
+--------------------------------------------------------------------------------
+
+Source: shivaalapurva
+Reference: शिवालापुरवा
+LSTM           : शिवालापूर्व
+Transformer    : शिवालपूर्व
+NVIDIA_Nemo    : शिवालापुरवा
+NVIDIA_Small   : शिवालापुर्वा
+Correct models: NVIDIA_Nemo
+--------------------------------------------------------------------------------
+
+Source: deedablyuen
+Reference: डीडब्ल्यूएन
+LSTM           : डीडब्ल्युएं
+Transformer    : डीडब्लायुएं
+NVIDIA_Nemo    : दिडेबल्यूएन
+NVIDIA_Small   : दिडेबलीउएन
+Correct models: None
+--------------------------------------------------------------------------------
+
+Source: jadule
+Reference: जडूले
+LSTM           : जड़ुले
+Transformer    : जडुले
+NVIDIA_Nemo    : जदुले
+NVIDIA_Small   : जादुले
+Correct models: None
+--------------------------------------------------------------------------------
+
+Source: shamtal
+Reference: शमलात
+LSTM           : शमतल
+Transformer    : शमताल
+NVIDIA_Nemo    : शांतल
+NVIDIA_Small   : शम्तल
+Correct models: None
+--------------------------------------------------------------------------------
+
+Source: extremadura
+Reference: एक्स्ट्रीमाडुरा
+LSTM           : एक्स्ट्रेमदुरा
+Transformer    : एक्सट्रीमदुरा
+NVIDIA_Nemo    : एक्स्ट्रीमादुरा
+NVIDIA_Small   : एक्स्ट्रेमादुरा
+Correct models: None
+--------------------------------------------------------------------------------
+
+Source: jhaiyaan
+Reference: झाइयां
+LSTM           : झइयां
+Transformer    : झैयां
+NVIDIA_Nemo    : ज्हईयान
+NVIDIA_Small   : झैयााँ
+Correct models: None
+--------------------------------------------------------------------------------
+
+Source: dangon
+Reference: डंगों
+LSTM           : दंगों
+Transformer    : डांगों
+NVIDIA_Nemo    : डांगन
+NVIDIA_Small   : दंगन
+Correct models: None
+--------------------------------------------------------------------------------

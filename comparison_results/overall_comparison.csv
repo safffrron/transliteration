@@ -1,0 +1,5 @@
+Model,Accuracy (%),CER,Similarity,Char Accuracy,Avg Edit Dist,Inference (ms),Throughput (w/s)
+LSTM,46.59,0.1574,0.8582,0.7587,0.96,165.55,6.04
+Transformer,47.78,0.1608,0.8581,0.7580,0.96,184.81,5.41
+NVIDIA_Nemo,32.78,0.2169,0.7968,0.6660,1.41,361.30,2.77
+NVIDIA_Small,44.32,0.1827,0.8467,0.7439,1.13,416.47,2.40

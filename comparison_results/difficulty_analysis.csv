@@ -1,0 +1,17 @@
+Difficulty,Model,Count,Accuracy
+Easy (0-25% error),LSTM,3458,0.9375361480624639
+Easy (0-25% error),Transformer,3458,0.9534412955465587
+Easy (0-25% error),NVIDIA_Nemo,3458,0.7047426257952574
+Easy (0-25% error),NVIDIA_Small,3458,0.915268941584731
+Medium (25-50% error),LSTM,1840,0.6402173913043478
+Medium (25-50% error),Transformer,1840,0.675
+Medium (25-50% error),NVIDIA_Nemo,1840,0.3005434782608696
+Medium (25-50% error),NVIDIA_Small,1840,0.3842391304347826
+Hard (50-75% error),LSTM,1519,0.19157340355497038
+Hard (50-75% error),Transformer,1519,0.19289005924950625
+Hard (50-75% error),NVIDIA_Nemo,1519,0.2139565503620803
+Hard (50-75% error),NVIDIA_Small,1519,0.40157998683344304
+Very Hard (75-100% error),LSTM,3295,0.0
+Very Hard (75-100% error),Transformer,3295,0.0
+Very Hard (75-100% error),NVIDIA_Nemo,3295,0.0
+Very Hard (75-100% error),NVIDIA_Small,3295,0.0
